@@ -281,6 +281,8 @@ class IntroductionScreen extends StatefulWidget {
 
   final ValueNotifier<double> notifier;
 
+  final List<Color>? pageColors;
+
   const IntroductionScreen({
     super.key,
     this.pages,
@@ -341,6 +343,7 @@ class IntroductionScreen extends StatefulWidget {
     this.canProgress = kDefaultCanProgressFunction,
     this.safeAreaList = const <bool>[false, false, false, false],
     required this.notifier,
+    this.pageColors,
   })  : assert(
           pages != null || rawPages != null,
           "You must set either 'pages' or 'rawPages' parameter",
@@ -621,7 +624,7 @@ class IntroductionScreenState extends State<IntroductionScreen> {
 
           /// You can use your own color list for page background
           //ignore: avoid_redundant_argument_values
-          colors: const <Color>[
+          colors: widget.pageColors ?? const <Color>[
             Color(0xFFAAAAAA),
             Color(0xFF669900),
             Color(0xFFCC0000),
