@@ -1,6 +1,6 @@
 name: my_intro
 description: "Introduction package"
-version: 0.0.1+1
+version: 0.0.2+1
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -14,7 +14,7 @@ dependencies:
   flutter_keyboard_visibility: ^6.0.0
 
 dev_dependencies:
-  flutter_lints: ^3.0.1
+  flutter_lints: ^3.0.2
   flutter_test:
     sdk: flutter
 
